@@ -13,6 +13,7 @@
                     <thead>
                         <tr>
                             <th>Name</th>
+                            <th>Category</th>
                             <th>Date</th>
                             <th>Actions</th>
                         </tr>
@@ -23,6 +24,7 @@
                                 <td><a
                                         href="{{ route('admin.projects.show', ['project' => $project['id']]) }}">{{ $project['name'] }}</a>
                                 </td>
+                                <td>{{ $project->type_id != null ? $project->type->name : 'Senza Categoria' }}</td>
                                 <td>{{ $project['assignment_date'] }}</td>
                                 <td>
                                     <div class="d-flex gap-1">

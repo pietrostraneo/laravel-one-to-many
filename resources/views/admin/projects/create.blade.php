@@ -39,6 +39,14 @@
                             cols="30" rows="10">{{ old('description') }}</textarea>
                     </div>
                     <div class="form-group mt-3">
+                        <label for="type_id">Select type:</label>
+                        <select name="type_id" id="type" class=" form-select @error('type_id') is-invalid @enderror ">
+                            @foreach ($types as $type)
+                                <option value="{{ $type->id }}">{{ $type->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group mt-3">
                         <label for="supervisors" class=" form-label ">Supervisors:</label>
                         <input type="text" name="supervisors"
                             class="form-control @error('supervisors') is-invalid @enderror" id="supervisors"
