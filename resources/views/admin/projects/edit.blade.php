@@ -37,8 +37,9 @@
                             cols="30" rows="10">{{ $project['description'] }}</textarea>
                     </div>
                     <div class="form-group mt-3">
-                        <label for="type_id">Select type:</label>
-                        <select name="type_id" id="type" class=" form-select @error('type_id') is-invalid @enderror ">
+                        <label for="type_id" class="form-label">Select type:</label>
+                        <select name="type_id" id="type" class=" form-select @error('type_id') is-invalid @enderror "
+                            required>
                             @foreach ($types as $type)
                                 <option value="{{ $type->id }}">{{ $type->name }}</option>
                             @endforeach

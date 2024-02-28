@@ -26,6 +26,7 @@ class UpdateProjectRequest extends FormRequest
         return [
             'name' => 'required|max:50|min:5',
             'description' => 'max:60000|min:15',
+            'type_id' => 'required',
             'supervisors' => 'required|max:150|min:5',
             'framework' => 'required|max:50|min:5',
             'assignment_date' => 'required|date'
@@ -40,6 +41,7 @@ class UpdateProjectRequest extends FormRequest
             'name.min' => 'The name must be at least 5 characters length',
             'description.max' => 'The description can be a max of 60000 characters length',
             'description.min' => 'The description must be at least 15 characters length',
+            'type_id.required' => 'Type for project is mandatory',
             'supervisors.required' => 'The name of the supervisors are mandatory',
             'supervisors.max' => 'The supervisors can be a max of 150 characters length',
             'supervisors.min' => 'The supervisors must be at least 5 characters length',

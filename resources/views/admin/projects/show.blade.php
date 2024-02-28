@@ -14,9 +14,11 @@
                         </div>
                         <h6 class="card-subtitle mb-2 text-body-secondary">{{ $project['assignment_date'] }}</h6>
                         @if ($project->preview != null)
-                            <img src="{{ asset('/storage/' . $project->preview) }}" alt="{{ $project->name }}">
+                            <img src="{{ asset('/storage/' . $project->preview) }}" alt="{{ $project->name }}"
+                                width="100px">
                         @endif
                         <p class="card-text">{{ $project['description'] }}</p>
+                        <p class="card-text"><strong>Type: </strong>{{ $project->type->name }}</p>
                         <p class="card-text"><strong>Supervisors: </strong>{{ $project['supervisors'] }}</p>
                         <p class="card-text"><strong>Framework: </strong>{{ $project['framework'] }}</p>
                     </div>
