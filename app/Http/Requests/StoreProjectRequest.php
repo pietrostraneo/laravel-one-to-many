@@ -26,7 +26,7 @@ class StoreProjectRequest extends FormRequest
         return [
             'name' => 'required|max:50|min:5',
             'description' => 'max:60000|min:15',
-            'supervisors' => 'required|max:50|min:5',
+            'supervisors' => 'required|max:150|min:5',
             'framework' => 'required|max:50|min:5',
             'assignment_date' => 'required|date'
         ];
@@ -41,7 +41,7 @@ class StoreProjectRequest extends FormRequest
             'description.max' => 'The description can be a max of 60000 characters length',
             'description.min' => 'The description must be at least 15 characters length',
             'supervisors.required' => 'The name of the supervisors are mandatory',
-            'supervisors.max' => 'The supervisors can be a max of 50 characters length',
+            'supervisors.max' => 'The supervisors can be a max of 150 characters length',
             'supervisors.min' => 'The supervisors must be at least 5 characters length',
             'framework.required' => 'The name of the framework is mandatory',
             'framework.max' => 'The framework can be a max of 50 characters length',
