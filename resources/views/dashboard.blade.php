@@ -27,6 +27,9 @@
                 <a href="{{ Route('admin.projects.index') }}">
                     <button class="btn btn-primary">VISUALIZZA I PROGETTI</button>
                 </a>
+                <a href="{{ Route('admin.types.index') }}">
+                    <button class="btn btn-primary">VISUALIZZA LE CATEGORIE</button>
+                </a>
             </div>
         </div>
     </div>
